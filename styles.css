@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background: #333;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
+    
+}
+
+
+header .logo {
+    max-width: 300px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 4% 20px;
+}
+
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+.promo-banner {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.promo-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.promo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);  /* for overlay */
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+.promo-text h1 {
+    color:#c06652;
+    margin: .5em;
+}
+.promo-text p {
+    margin:0;
+
+}
+ 
+.columns {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.column {
+    flex: 1 0 30%;
+    margin: 5px;
+    padding: 10px;
+    background: #fff;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.column-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.column h2 {
+    color: #333;
+}
+
+.column p {
+    color: #666;
+}
+
+.column a {
+    display: inline-flex;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #c06652;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.column a:hover {
+    background: #720263d6;        
+}
+
+.nav-item a:hover {
+    color: #c06652;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+}
+
+.footer-column img {
+    max-width: 100px;
+    height: auto;
+}
+
+@media (max-width: 300px) {
+   .column {
+        flex: 1 0 80%;
+    }
+}

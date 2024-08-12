@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "stylelint": "^16.8.1",
+    "stylelint-config-standard": "^36.0.1"
+  },
+  "name": "portfolioproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "stylelint-config-recommended": "^14.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
