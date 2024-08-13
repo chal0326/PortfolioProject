@@ -1,18 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-
-
+@font-face {
+	font-family: 'AmbidexterWebRegular';
+	src: 
+		url('/assets/ambidexter_regular.woff2') format('woff2'),
+		url('/assets/ambidexter_regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+    font-display: swap;
+}
+  
 header {
     background: #333;
     padding: 1em;
     text-align: center;
     align-items: center;
-    
 }
-
 
 header .logo {
     max-width: 300px;
@@ -24,7 +29,6 @@ header .logo {
     display: flex;
     align-items: center;
     justify-content: space-around;
-   
 }
 
 .nav-list {
@@ -45,6 +49,9 @@ header .logo {
     font-size: 1rem;
 }
 
+.nav-item a:hover {
+    color: #c06652;
+}
 
 .promo-banner {
     position: relative;
@@ -63,31 +70,35 @@ header .logo {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.7);  /* for overlay */
+    background: rgba(0, 0, 0, 0.7);
     padding: 1em;
     border-radius: 10px;
     font-size: 1em;
 }
 
 .promo-text h1 {
-    color:#c06652;
-    margin: .5em;
+    font-family: AmbidexterWebRegular;
+    color: #c06652;
+    margin-bottom: 1em;
 }
-.promo-text p {
-    margin:0;
 
+.promo-text p {
+    margin: 0;
 }
- 
+
 .columns {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    gap: 20px;
 }
 
 .column {
+    display: flex;
+    flex-direction: column;
     flex: 1 0 30%;
+    align-items: center;
     margin: 5px;
     padding: 10px;
     background: #fff;
@@ -97,17 +108,21 @@ header .logo {
 }
 
 .column-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    display: block;
+    max-height: 200px; /* Ensures all images are of the same height */
+    object-fit: cover; /* Ensures the image scales correctly */
+    margin-bottom: 10px;
 }
 
 .column h2 {
     color: #333;
+    margin: 10px 0;
 }
 
 .column p {
     color: #666;
+    margin: 10px 0;
 }
 
 .column a {
@@ -122,10 +137,6 @@ header .logo {
 
 .column a:hover {
     background: #720263d6;        
-}
-
-.nav-item a:hover {
-    color: #c06652;
 }
 
 footer {
@@ -148,8 +159,16 @@ footer {
     height: auto;
 }
 
-@media (max-width: 300px) {
-   .column {
-        flex: 1 0 80%;
+/*
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        flex: 1 0 100%;
+        max-width: 90%;
     }
 }
+*/
